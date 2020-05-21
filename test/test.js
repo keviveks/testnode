@@ -4,7 +4,7 @@ const expect = chai.expect;
 
 chai.should();
 
-describe('Number Tests', () => {
+describe.skip('Number Tests', () => {
   function isEven(number) {
     return number % 2 === 0;
   }

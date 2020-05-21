@@ -10,7 +10,7 @@ chai.should();
 
 // Mock - mocks object
 
-describe('Sinon Mock Test', () => {
+describe.skip('Sinon Mock Test', () => {
   let student;
   let schedule;
 

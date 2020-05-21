@@ -6,7 +6,7 @@ chai.should();
 
 // Spies - to spy on single function
 
-describe('Sinon Spies Test', () => {
+describe.skip('Sinon Spies Test', () => {
   let student;
   let schedule;
 

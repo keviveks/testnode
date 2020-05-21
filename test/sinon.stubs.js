@@ -8,7 +8,7 @@ chai.should();
 // Stubs - to watch entire object (stub will have all the functionalities of spy)
 // stub does not call inner implementation of underlying method
 
-describe('Sinon Stubs Test', () => {
+describe.skip('Sinon Stubs Test', () => {
   let student;
   let schedule;
 
