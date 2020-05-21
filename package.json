@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/keviveks/testnode#readme",
   "dependencies": {
+    "bluebird": "^3.7.2",
     "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
     "mocha": "^7.1.2",
     "sinon": "^9.0.2",
     "uuid": "^8.1.0"
