@@ -1,0 +1,24 @@
+{
+  "name": "testnode",
+  "version": "1.0.0",
+  "description": "Unit test in nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keviveks/testnode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keviveks/testnode/issues"
+  },
+  "homepage": "https://github.com/keviveks/testnode#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.2",
+    "sinon": "^9.0.2"
+  }
+}
