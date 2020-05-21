@@ -49,4 +49,31 @@ describe('Course Test', () => {
       }).to.throw();
     });
   });
+
+  describe('Course Timings', () => {
+    it('should add date/time to the course', () => {
+      const course = Course.create(testCourseName, testCourseCode, testCourseDescription);
+
+      const days = ['Monday', 'Wednesday', 'Friday'];
+      const times = ['10:00', '15:00'];
+
+      course.addTimes(days, times);
+
+      course.timings.length.should.equal(6);
+      course.timings[2].should.eql({
+        day: 'Wednesday',
+        time: '10:00',
+      });
+    });
+
+    it('should throw error if pass invalid day to the course', () => {
+      const course = Course.create(testCourseName, testCourseCode, testCourseDescription);
+      const day = 'invalidday';
+      const time = '10:00';
+
+      expect(() => {
+        course.addTimes(day, time);
+      }).to.throw();
+    });
+  });
 });

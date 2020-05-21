@@ -34,20 +34,34 @@ _p.unregisterStudent = function(studentId) {
   }
 };
 
-_p.addTimes = function(dates, times) {
+_p.addTimes = function(days, times) {
   const me = this;
 
-  if (!Array.isArray(dates)) {
-    dates = [dates];
+  if (!Array.isArray(days)) {
+    days = [days];
   }
 
   if (!Array.isArray(times)) {
     times = [times];
   }
 
+  const validDays = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+  ];
+
   days.forEach(function(day) {
+    if (validDays.indexOf(day) === -1) {
+      throw new Error(day + ' is not a valid day!');
+    }
+
     times.forEach(function(time) {
-      me.times.push({
+      me.timings.push({
         'day': day,
         'time': time,
       });
@@ -58,7 +72,7 @@ _p.addTimes = function(dates, times) {
 _p.showSchedule = function() {
   let scheduleString = '';
 
-  this.times.forEach(function(t) {
+  this.timings.forEach(function(t) {
     if (scheduleString != '') {
       scheduleString += '\n';
     }
