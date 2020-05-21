@@ -8,7 +8,7 @@ const expect = chai.expect;
 const should = chai.should();
 
 
-describe('Student Test', () => {
+describe.skip('Student Test', () => {
   const testStudentName = 'Test Student';
   const testStudentGrade = 5;
   it('should save student id along with id', () => {

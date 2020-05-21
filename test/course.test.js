@@ -8,7 +8,7 @@ const expect = chai.expect;
 const should = chai.should();
 
 
-describe('Course Test', () => {
+describe.skip('Course Test', () => {
   const testCourseName = 'Awesome Course';
   const testCourseCode = 'AWE-2020';
   const testCourseDescription = 'This course will be awesome';
